@@ -76,6 +76,7 @@ h5 {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color var(--animation-duration) var(--animation-type);
 }
 
 .nav-link::after {
@@ -90,10 +91,12 @@ h5 {
 
   background-color: var(--accent-color);
   opacity: 0;
+  transition: opacity var(--animation-duration) var(--animation-type);
 }
 
 .current.nav-link::after,
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link:focus::after {
   opacity: 1;
 }
 
@@ -154,6 +157,7 @@ h5 {
   color: var(--primary-text-color);
   text-decoration: none;
   list-style: none;
+  transition: color var(--animation-duration) var(--animation-type);
 }
 
 .contacts .link:hover,
@@ -677,6 +681,43 @@ h5 {
 
 .flex-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.flex-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  opacity: 0.9;
+  transform: translateX(0) translateY(100%);
+  padding-top: 63px;
+  padding-right: 23px;
+  padding-left: 23px;
+  padding-bottom: 63px;
+  transition: transform var(--animation-duration) var(--animation-type);
+}
+
+.flex-link:hover .image-overlay,
+.flex-link:focus .image-overlay {
+  transform: translateX(0) translateY(0);
+}
+
+.image-overlay .text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  letter-spacing: 0.03em;
+
+  color: var(--primary-white-color);
+  margin: 0;
 }
 
 .flex-image {
