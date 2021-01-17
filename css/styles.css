@@ -414,8 +414,13 @@ h5 {
   justify-content: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
 
   color: var(--icon-color);
+  fill: currentColor;
+
+  transition: fill var(--animation-duration) var(--animation-type),
+    background-color var(--animation-duration) var(--animation-type);
 }
 
 .team-social .social-link:hover,
@@ -467,12 +472,15 @@ h5 {
   align-items: center;
 }
 
-.clients .link-client {
+.clients-logo .link-client {
   color: var(--icon-color);
+  fill: currentColor;
+  transition: color var(--animation-duration) var(--animation-type),
+    border var(--animation-duration) var(--animation-type);
 }
 
-.clients .link-client:hover,
-.clients .link-client:focus {
+.clients-logo .link-client:hover,
+.clients-logo .link-client:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -556,6 +564,7 @@ h5 {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition: color var(--animation-duration) var(--animation-type);
 }
 
 .contacts-footer .link:hover,
@@ -604,6 +613,8 @@ h5 {
 
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition: background-color var(--animation-duration) var(--animation-type);
 }
 
 .followers-list .follow-us:hover,
@@ -643,6 +654,9 @@ h5 {
   border-radius: 4px;
   border: 1px transparent;
   letter-spacing: 0.03em;
+
+  transition: color var(--animation-duration) var(--animation-type),
+    background-color var(--animation-duration) var(--animation-type);
 }
 
 .buttons {
